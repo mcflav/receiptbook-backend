@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "receiptbook_jwtPrivateKey",
+    "db": "receiptbook_db"
+}

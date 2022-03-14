@@ -34,7 +34,7 @@ const User = mongoose.model('User', userSchema);
 
 const receiptSchema = mongoose.Schema({
     receiptDate: {
-        type: String,
+        type: Date,
         required: true
     },
     receivedFrom: {
@@ -91,7 +91,7 @@ function validateUsers(users) {
 
 function validateReceipt(receipt) {
     const schema = {
-        receiptDate: Joi.string().required(),
+        receiptDate: Joi.date().required(),
         receivedFrom: Joi.string().min(2).max(255).required(),
         amount: Joi.number().required(),
         paymentOf: Joi.string().min(3).max(255).required(),
